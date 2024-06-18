@@ -53,7 +53,7 @@ const SearchButton: React.FC<SearchButtonProps> = ({ disp, className }) => {
           </div>
         </>
       ) : (
-        <div className={`${className}`}>
+        <>
           <label htmlFor="" className="font-semibold text-lg">
             City:
           </label>
@@ -92,7 +92,7 @@ const SearchButton: React.FC<SearchButtonProps> = ({ disp, className }) => {
               </svg>
             </span>
           </div>
-        </div>
+        </>
       )}
       <div
         className={`${
@@ -124,10 +124,10 @@ const SearchButton: React.FC<SearchButtonProps> = ({ disp, className }) => {
             <span> My location </span>
           </div>
         </button>
-        <p className="px-4 py-2 font-semibold bg-slage-100 text-slate-500">
+        <p className="px-4 py-2 font-semibold bg-slate-100 text-slate-500">
           SUGGESTIONS
         </p>
-        <p className="px-4 py-2 sm text-slate-500">No results for search</p>
+        <p className="px-4 py-2 sm text-slate-500 bg-white">No results for search</p>
       </div>
     </div>
   );

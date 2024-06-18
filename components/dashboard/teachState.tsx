@@ -11,7 +11,7 @@ const TeachStage: React.FC = () => {
           className="rounded-xl pb-3 w-[1168px] h-[340px]"
         />
 
-        <div className="flex flex-col gap-5 space-y-3">
+        <div className="flex flex-col gap-5 space-y-3 pb-4">
           <p className="lg:text-2xl font-semibold text-gray-800">
             Search for the teaching stage
           </p>

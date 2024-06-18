@@ -3,7 +3,7 @@ import { TransformingCard } from "@/components/basecomponents/cards";
 const Transforming:React.FC = () => {
     return (
         <div className="flex flex-col gap-5 bg-white 2xl:w-[70vw] xl:w-[80vw] lg:w-[90vw] px-2">
-            <p className="text-2xl font-bold">
+            <p className="text-2xl font-bold text-gray-800">
                 Transforming lives and stories!
             </p>
             <div className="flex w-full gap-5">

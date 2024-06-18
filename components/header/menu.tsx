@@ -1,5 +1,15 @@
-const Menu = () => {
+'use client';
+
+import { useState } from "react";
+
+interface MenuProps {
+  menu: number;
+}
+
+const Menu:React.FC<MenuProps> = ({menu}) => {
+  const [educ, setEduc] = useState<boolean>(false);
   return (
+    <>
     <div className="hidden lg:flex gap-20 text-white justify-center">
       <div className="relative flex flex-col gap-1 group/como">
         <div className="flex justify-center gap-5 cursor-pointer">
@@ -243,6 +253,65 @@ const Menu = () => {
         <span>Register your school</span>
       </div>
     </div>
+    <div className={`${menu === 1 ? "flex" : "hidden"} lg:hidden flex-col justify-between text-xl h-[80%]`}>
+    <ul className="flex flex-col gap-4">
+      <li className="border-b border-slate-300 cursor-pointer hover:bg-slate-50">
+        School
+      </li>
+      <li className="border-b border-slate-300 cursor-pointer">
+        <div className="flex flex-col gap-4">
+          <div
+            className="flex gap-2 cursor-pointer"
+            onClick={() => setEduc(!educ)}
+          >
+            <p>Education Levels</p>
+            <span className={`${educ && "rotate-180"} transition`}>
+              <svg
+                className="w-6 h-6 text-slate-500"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="m19 9-7 7-7-7"
+                />
+              </svg>
+            </span>
+          </div>
+          <div
+            className={`${educ ? "flex" : "hidden"} flex-col ml-5 gap-4`}
+          >
+            <p className="border-b border-slate-300 cursor-pointer hover:bg-slate-50">
+              Child education
+            </p>
+            <p className="border-b border-slate-300 cursor-pointer hover:bg-slate-50">
+              Elementary School 1
+            </p>
+            <p className="border-b border-slate-300 cursor-pointer hover:bg-slate-50">
+              Elementary School 2
+            </p>
+            <p className="border-b border-slate-300 cursor-pointer hover:bg-slate-50">
+              High school
+            </p>
+          </div>
+        </div>
+      </li>
+      <li className="border-b border-slate-300 cursor-pointer hover:bg-slate-50">
+        <span>Magazine</span>
+      </li>
+      <li className="border-b border-slate-300 cursor-pointer hover:bg-slate-50">
+        <span>Register your school</span>
+      </li>
+    </ul>
+  </div>
+  </>
   );
 };
 
