@@ -7,9 +7,9 @@ const Filters:React.FC = () => {
     const [school, setSchool] = useState<string>("");
     return (
         <div className="flex flex-col gap-5">
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between w-[270px] items-center">
             <p className="text-2xl text-gray-800 font-bold">Filters:</p>
-            <a href="#" className="flex gap-4 items-center text-purple-700 hover:bg-purple-50">
+            <a href="#" className="flex text-sm gap-4  items-center text-purple-700 hover:bg-purple-50">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="1em"
@@ -33,9 +33,7 @@ const Filters:React.FC = () => {
               <span>Clear filters</span>
             </a>
           </div>
-          <div className="flex flex-wrap gap-3">
-          </div>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col text-sm  gap-4 text-gray-600 ">
             <Neighborhood disp={1} className="" />
             <SearchSchool disp={1} className="" setSchoolParent={setSchool} />
             <SearchSeries disp={1} className="" school={school} />

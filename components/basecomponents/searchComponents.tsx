@@ -45,7 +45,7 @@ const SearchButton: React.FC<SearchButtonProps> = ({ disp, className }) => {
             </span>
             <input
               type="text"
-              className={`text-xl py-2 focus:outline-none rounded-full w-4/5`}
+              className={`py-3 focus:outline-none rounded-full w-4/5 text-sm `}
               value={geo}
               onChange={(e) => setGeo(e.target.value)}
               onClick={() => setShowGeo(true)}
@@ -60,7 +60,7 @@ const SearchButton: React.FC<SearchButtonProps> = ({ disp, className }) => {
           <div className="flex items-center relative rounded-full border">
             <input
               type="text"
-              className="px-7 py-2 rounded-full w-full focus:outline-none focus:ring-2 focus:ring-purple-500 border border-purple-500"
+              className="px-7 py-1 rounded-full w-full focus:outline-none focus:ring-2 focus:ring-purple-500 border border-purple-500"
               value={geo}
               onClick={() => setShowGeo(true)}
               onChange={(e) => setGeo(e.target.value)}
@@ -162,7 +162,7 @@ const Neighborhood: React.FC<SearchButtonProps> = ({ disp, className }) => {
             </span>
             <input
               type="text"
-              className={`text-xl py-2 focus:outline-none rounded-full w-4/5`}
+              className={`text-sm py-3 focus:outline-none rounded-full w-4/5`}
               value={neigh}
               onChange={(e) => setNeigh(e.target.value)}
               placeholder="Eter your neighbor"
@@ -178,7 +178,8 @@ const Neighborhood: React.FC<SearchButtonProps> = ({ disp, className }) => {
           <div className="flex items-center relative rounded-full">
             <input
               type="text"
-              className="px-8 py-2 rounded-full w-full focus:outline-none border border-purple-500 focus:ring-2 focus:ring-purple-500"
+              placeholder="Enter your neighborhood"
+              className="px-10 py-1 text-sm rounded-full w-full focus:outline-none border border-purple-500 focus:ring-2 focus:ring-purple-500"
               value={neigh}
               onClick={() => {console.log('4567'); setShowNeigh(true)}}
               onChange={(e) => setNeigh(e.target.value)}
@@ -260,10 +261,10 @@ const SearchSchool: React.FC<SearchButtonProps> = ({
             </span>
             <input
               type="text"
-              className={`text-xl py-2 focus:outline-none rounded-full w-4/5`}
+              className={`text-sm py-3 focus:outline-none rounded-full w-4/5`}
               value={school}
               onChange={(e) => handleSetSchool(e.target.value)}
-              placeholder="Eter your neighbor"
+              placeholder="Enter your neighbor"
               onClick={() => setShowSchool(true)}
             />
           </div>
@@ -276,7 +277,7 @@ const SearchSchool: React.FC<SearchButtonProps> = ({
           <div className="flex items-center relative rounded-full">
             <input
               type="text"
-              className="px-8 py-2 rounded-full w-full focus:outline-none border border-purple-500 focus:ring-purple-500 focus:ring-2"
+              className="px-10 py-1 text-sm rounded-full w-full focus:outline-none border border-purple-500 focus:ring-purple-500 focus:ring-2"
               value={school}
               onClick={() => setShowSchool(false)}
               onChange={(e) => handleSetSchool(e.target.value)}
@@ -355,7 +356,7 @@ const SearchSeries: React.FC<SearchButtonProps> = ({
             </span>
             <input
               type="text"
-              className={`text-xl py-2 focus:outline-none rounded-full w-4/5`}
+              className={`text-sm py-1 focus:outline-none rounded-full w-4/5`}
               value={series}
               onChange={(e) => setSeires(e.target.value)}
               placeholder="Select a series"
@@ -389,7 +390,7 @@ const SearchSeries: React.FC<SearchButtonProps> = ({
           <div className={`flex items-center relative rounded-full`}>
             <input
               type="text"
-              className="px-8 py-2 rounded-full w-full border focus:outline-none border-purple-500 focus:ring-2 focus:ring-purple-500"
+              className="px-10 py-1 text-sm rounded-full w-full border focus:outline-none border-purple-500 focus:ring-2 focus:ring-purple-500"
               value={series}
               onClick={() => setShowValue(true)}
               onChange={(e) => setSeires(e.target.value)}
@@ -423,7 +424,7 @@ const SearchSeries: React.FC<SearchButtonProps> = ({
       >
         <ul role="listbox">
           <li
-            className="hover:bg-orange-400 hover:text-white px-4 py-2 cursor-pointer"
+            className="hover:bg-orange-400 hover:text-white px-4 py-1 cursor-pointer"
             role="option"
             aria-selected="true"
           >
@@ -432,7 +433,7 @@ const SearchSeries: React.FC<SearchButtonProps> = ({
             </strong>
           </li>
           <li
-            className="hover:bg-orange-400 hover:text-white px-4 py-2 cursor-pointer"
+            className="hover:bg-orange-400 hover:text-white px-4 py-1 cursor-pointer"
             role="option"
             aria-selected="false"
           >
@@ -441,7 +442,7 @@ const SearchSeries: React.FC<SearchButtonProps> = ({
             </strong>
           </li>
           <li
-            className="hover:bg-orange-400 hover:text-white px-4 py-2 cursor-pointer"
+            className="hover:bg-orange-400 hover:text-white px-4 py-1 cursor-pointer"
             role="option"
             aria-selected="false"
           >

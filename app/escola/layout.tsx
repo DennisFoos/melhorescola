@@ -96,11 +96,11 @@ export default function RootLayout({
         <p>
           {} bags found in {}
         </p>
-        <div className="flex justify-around gap-5">
-          <div className="flex items-center relative">
+        <div className="flex justify-around items-center gap-5">
+          <div className="flex items-center relative text-gray-700 text-sm">
             <select
               name="order"
-              className="rounded-full px-8 py-1 border border-slate-300 focus:ring-4 ring-purple-600 focus:outline-purple-600"
+              className="rounded-full px-8 py-1 border border-slate-300 focus:ring-2 ring-purple-600 focus:outline-purple-600"
             >
               <option value={0}>Relevance</option>
               <option value={1}>Lowest Price</option>
@@ -114,6 +114,7 @@ export default function RootLayout({
                 width="1em"
                 height="1em"
                 viewBox="0 0 512 512"
+                className="p-2"
               >
                 <path
                   fill="currentColor"
@@ -122,7 +123,7 @@ export default function RootLayout({
               </svg>
             </span>
           </div>
-          <div className="flex gap-5">
+          <div className="flex gap-5 items-center">
             <span className="rounded-full bg-orange-600 text-white px-2 flex items-center cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -156,9 +157,9 @@ export default function RootLayout({
       {/* <hr className="text-gray-700" /> */}
       <div className="pt-0 flex gap-10 xl:w-[80vw] lg:w-[90vw] pb-5">
         <Filters />
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
           {SearchResults.map((result: any, index: number) => 
-            <div key={index} className="bg-white max-w-sm p-6 border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700">
+            <div key={index} className="bg-white max-w-sm p-4 border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700">
               <SearchResultCard 
                 key={index}
                 mark={result.mark}
