@@ -1,5 +1,83 @@
 import Link from "next/link";
 import Filters from "@/components/basecomponents/filters";
+import { SearchResultCard } from "@/components/basecomponents/cards";
+
+let SearchResults = [{
+  mark: "https://img.imageboss.me/me/cover:center/48x48/format:auto/20230111134036974.jpg",
+  star: 1,
+  title: "Santo Antonio College",
+  at: "Joinville - SC",
+  position: "Iririu",
+  amount: "306.57",
+  period: "Early Childhood Education - Nursery (0 to 1 year old)",
+  schoolYear: [2024, 2025],
+  shift: ['full', 'morning'],
+  originUnit: "R$",
+  originPrice: 1000,
+  presentUnit: "BRL",
+  presentPrice: 500,
+}, 
+{
+  mark: "https://img.imageboss.me/me/cover:center/48x48/format:auto/20230111134036974.jpg",
+  star: 1,
+  title: "Santo Antonio College",
+  at: "Joinville - SC",
+  position: "Iririu",
+  amount: "306.57",
+  period: "Early Childhood Education - Nursery (0 to 1 year old)",
+  schoolYear: [2024, 2025],
+  shift: ['full', 'morning'],
+  originUnit: "R$",
+  originPrice: 1000,
+  presentUnit: "BRL",
+  presentPrice: 500,
+}, 
+{
+  mark: "https://img.imageboss.me/me/cover:center/48x48/format:auto/20230111134036974.jpg",
+  star: 1,
+  title: "Santo Antonio College",
+  at: "Joinville - SC",
+  position: "Iririu",
+  amount: "306.57",
+  period: "Early Childhood Education - Nursery (0 to 1 year old)",
+  schoolYear: [2024, 2025],
+  shift: ['full', 'morning'],
+  originUnit: "R$",
+  originPrice: 1000,
+  presentUnit: "BRL",
+  presentPrice: 500,
+}, 
+{
+  mark: "https://img.imageboss.me/me/cover:center/48x48/format:auto/20230111134036974.jpg",
+  star: 1,
+  title: "Santo Antonio College",
+  at: "Joinville - SC",
+  position: "Iririu",
+  amount: "306.57",
+  period: "Early Childhood Education - Nursery (0 to 1 year old)",
+  schoolYear: [2024, 2025],
+  shift: ['full', 'morning'],
+  originUnit: "R$",
+  originPrice: 1000,
+  presentUnit: "BRL",
+  presentPrice: 500,
+}, 
+{
+  mark: "https://img.imageboss.me/me/cover:center/48x48/format:auto/20230111134036974.jpg",
+  star: 1,
+  title: "Santo Antonio College",
+  at: "Joinville - SC",
+  position: "Iririu",
+  amount: "306.57",
+  period: "Early Childhood Education - Nursery (0 to 1 year old)",
+  schoolYear: [2024, 2025],
+  shift: ['full', 'morning'],
+  originUnit: "R$",
+  originPrice: 1000,
+  presentUnit: "BRL",
+  presentPrice: 500,
+}
+];
 
 export default function RootLayout({
   children,
@@ -7,14 +85,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="flex flex-col gap-5 py-5">
-      <div className="flex gap-5 justify-around w-full">
-        <Link href="/" className="text-pruple-600">
+    <div className="flex flex-col bg-slate-100 py-0 space-y-8 items-center">
+      <div className="flex gap-3 items-center xl:w-[80vw] lg:w-[90vw] pt-3">
+        <Link href="/" className="text-purple-600">
           Home page
         </Link>
-        {/* <span>{`/`}</span> */}
+        <span className="pt-2 text-gray-500 text-md" >{`/`} Search</span>
       </div>
-      <div className="flex justify-around w-full">
+      <div className="flex gap-10 justify-between xl:w-[80vw] lg:w-[90vw]">
         <p>
           {} bags found in {}
         </p>
@@ -75,10 +153,29 @@ export default function RootLayout({
           </div>
         </div>
       </div>
-      <div className="flex gap-5 w-full justify-around">
+      {/* <hr className="text-gray-700" /> */}
+      <div className="pt-0 flex gap-10 xl:w-[80vw] lg:w-[90vw] pb-5">
         <Filters />
-        <div className="flex flex-wrap gap-5">
-            
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
+          {SearchResults.map((result: any, index: number) => 
+            <div key={index} className="bg-white max-w-sm p-6 border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700">
+              <SearchResultCard 
+                key={index}
+                mark={result.mark}
+                title={result.title}
+                star={result.star}
+                at={result.at}
+                period={result.period}
+                position={result.position}
+                schoolYear={result.schoolYear}
+                shift={result.shift}
+                originUnit={result.originUnit}
+                originPrice={result.originPrice}
+                presentUnit={result.presentUnit}
+                presentPrice={result.presentPrice}
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>

@@ -160,4 +160,83 @@ const PrivateSchoolCard: React.FC<PrivateSchoolCardProps> = ({
   )
 }
 
-export { TransformingCard, OtherSchoolsCard, LatestArticleCard, PrivateSchoolCard };
+interface SearchResultCardProps {
+  mark: any;
+  title: string;
+  star: number;
+  at: string;
+  period: string;
+  position: string;
+  schoolYear: any;
+  shift: any;
+  originUnit: string;
+  originPrice: number;
+  presentUnit: string;
+  presentPrice: number;
+}
+
+const SearchResultCard: React.FC<SearchResultCardProps> = ({
+  mark,
+  title,
+  star,
+  at,
+  period,
+  position,
+  schoolYear,
+  shift,
+  originUnit,
+  originPrice,
+  presentUnit,
+  presentPrice,
+}) => {
+  return (
+    <div className="flex flex-col p-2 bg-white rounded-lg justify-between gap-5">
+      <div className="flex justify-between items-center">
+        <img
+          src={mark}
+          alt=""
+          width={70}
+          height={70}
+          className="w-12 h-12 rounded-full ring-2 "
+        />
+        <p className="text-based font-semibold text-gray-700">{title}</p>
+      </div>
+      <div className="flex gap-2">
+        {stars.map((s: any, index: number) => (
+          <Star key={index} flag={index < star ? true : false} />
+        ))}
+        <span>{star}</span>
+      </div>
+      <div className="flex flex-col gap-2 text-gray-400">
+        <p>{period}</p>
+        <p>{position}</p>
+        <p>{at}</p>
+      </div><hr className="p-2"/>
+      <div className="flex flex-col">
+        <p>School year</p>
+        {schoolYear.map((year: any, index: number) => {
+          <button key = {index}>
+            {year}
+          </button>
+        })}
+        <p>Shift</p>
+        {shift.map((time: string, index: number) => {
+          <button key = {index}>
+            {time}
+          </button>
+        })}
+      </div>
+      <div className="flex space-y-0 flex-col">
+        <p className="pb-0 text-gray-400">{originUnit} {originPrice}</p>
+        <p className="pt-0 font-semibold text-gray-700">
+          {presentUnit} {presentPrice} 
+          <span className="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">
+            {/* - ({presentPrice}%{originPrice}) * 100 */}
+          </span>
+        </p>
+      </div>
+    </div>
+  )
+}
+
+export { TransformingCard, OtherSchoolsCard, LatestArticleCard, PrivateSchoolCard, SearchResultCard };

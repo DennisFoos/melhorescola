@@ -6,10 +6,10 @@ import { Neighborhood, SearchSchool, SearchSeries } from "./searchComponents";
 const Filters:React.FC = () => {
     const [school, setSchool] = useState<string>("");
     return (
-        <div className="flex flex-col gap-3">
-          <div className="flex justify-between items-end">
-            <p className="text-2xl font-bold">Filters:</p>
-            <a href="#" className="flex gap-4 text-purple-700 hover:bg-purple-50">
+        <div className="flex flex-col gap-5">
+          <div className="flex justify-between items-center">
+            <p className="text-2xl text-gray-800 font-bold">Filters:</p>
+            <a href="#" className="flex gap-4 items-center text-purple-700 hover:bg-purple-50">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="1em"
