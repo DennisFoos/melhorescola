@@ -4,15 +4,15 @@ import Image from "next/image";
 const TeachStage: React.FC = () => {
   return (
     <div className="flex flex-col bg-white 2xl:w-[70vw] xl:w-[80vw] lg:w-[90vw] px-2">
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col space-y-5 gap-5">
         <Image
           src={teachImage}
           alt="this is teach image"
-          className="rounded-xl"
+          className="rounded-xl pb-3 w-[1168px] h-[340px]"
         />
 
-        <div className="flex flex-col gap-5">
-          <p className="lg:text-xl font-semibold">
+        <div className="flex flex-col gap-5 space-y-3">
+          <p className="lg:text-2xl font-semibold text-gray-800">
             Search for the teaching stage
           </p>
           <div className="grid lg:grid-cols-4 lg:gap-10 sm:grid-cols-2 gap-3">
